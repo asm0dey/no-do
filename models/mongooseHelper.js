@@ -11,7 +11,7 @@ require("requirejs").define("models/mongooseHelper", [], function () {
 			connected.resolve();
 		});
 
-		mongoose.connect(process.env.MONGO_DB_URL || "mongodb://user:password@my.mongo.server.com/my_db");
+		mongoose.connect(process.env.MONGO_DB_URL || "mongodb://127.0.0.1");
 
 		return {
 			mongoose: mongoose,
