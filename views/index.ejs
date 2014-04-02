@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title ng-bind="'pageTitle'|translate">Default Page Title</title>
+    <link rel="stylesheet" href="/<%=resourceVersion%>/bootstrap/dist/css/bootstrap.css"/>
+
+    <link rel="stylesheet" href="/<%=resourceVersion%>/stylesheets/global.css"/>
+    <link rel="stylesheet" href="/<%=resourceVersion%>/stylesheets/main.css"/>
+    <!--client-stylus:<link rel="stylesheet" href="/<[%=resourceVersion%>/stylesheets/[[%=nameCamel%>.css"/>[[%='\n\t'%>-->
+
+	<!-- Needs to be load before RequireJS (clashes!!!): -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	
+    <script type="text/javascript" src="/<%=resourceVersion%>/requirejs/require.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angular-seed/app/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angular-seed/app/lib/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angular-ui-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angular-translate/angular-translate.min.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/linqjs-amd/linq.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angularjs-modal-service/src/createDialog.js"></script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/angular-google-chart/ng-google-chart.js"></script>
+	<script type="text/javascript" src="/<%=resourceVersion%>/ng-socket/ngSocket.js"></script>
+
+    <script type="application/javascript">
+        var __webApp_ResourceVersion="<%=resourceVersion%>";
+    </script>
+    <script type="text/javascript" src="/<%=resourceVersion%>/scripts/config.js"></script>
+</head>
+<body>
+<div class="page ng-cloak">
+    <div class="menu">
+        <ul>
+            <li><a ui-sref="main">{{"headerMain"|translate}}</a></li>
+            <li><a ui-sref="other">{{"headerOther"|translate}}</a></li>
+        </ul>
+    </div>
+    <div class="content" ui-view></div>
+</div>
+</body>
+</html>
